@@ -14,7 +14,7 @@
       <div class="col-span-1">
         <div class="space-y-5">
           <div class="flex justify-between items-center gap-2 border-b border-gray-700 pb-3">
-            <h3 class="text-lg text-white leading-6">Usuário</h3>
+            <h3 class="text-lg text-white leading-6">Usuários</h3>
             <span v-if="users.length" class="text-gray-600 text-sm">Usuários encontrados: {{ totalUsers }}</span>
           </div>
           <ul class="space-y-5  overflow-x-auto divide-y divide-gray-700">
@@ -54,7 +54,7 @@
             <li v-else-if="error">
               <ErrorCard/>
             </li>
-            <li v-if="isNotFound">
+            <li v-else-if="isNotFound">
               <p>Não encontrado</p>
             </li>
             <li v-else v-for="repository in repositories" :key="repository.id">
