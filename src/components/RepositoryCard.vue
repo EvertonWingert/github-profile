@@ -7,7 +7,7 @@
             {{ repository.name }}
           </a>
         </h2>
-      <a :href="repository.html_url" class="relative group flex items-center space-x-2.5">
+      <a :href="repository.html_url" target="_blank" class="relative group flex items-center space-x-2.5">
         <svg class="flex-shrink-0 w-5 h-5 text-gray-400 group-hover:text-gray-500" viewBox="0 0 18 18" fill="none"
              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path fill-rule="evenodd" clip-rule="evenodd"

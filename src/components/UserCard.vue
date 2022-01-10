@@ -1,6 +1,6 @@
 <template>
   <div @click="showRepositories(user.login)">
-    <div class="flex gap-2 hover:bg-gray-800 py-2 px-2">
+    <div class="flex gap-2 hover:bg-gray-800 py-2 px-2 border " :class="[active ? 'border-emerald-500' : 'border-transparent']">
       <img :src="user.avatar_url" class="w-12"/>
       <div>
         <span class="text-gray-200 text-sm">{{ user.login }}</span>
@@ -16,12 +16,16 @@ const props = defineProps({
     type: Object,
     required: true
   },
+  active:{
+    type: Boolean,
+    default: false
+  }
 });
-const emit = defineEmits(['onPressed']);
+const emit = defineEmits(['showRepositories']);
 
 
 function showRepositories(user){
-  emit("onPressed", user);
+  emit("showRepositories", user);
 }
 
 
