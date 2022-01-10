@@ -82,7 +82,6 @@ const users = ref([]);
 const totalUsers = ref(0);
 const currentPage = ref(1);
 const activeUser = ref(null);
-
 const isNotFound = ref(false);
 
 function searchUser(name) {
@@ -107,13 +106,10 @@ function searchUser(name) {
 
 }
 
-
 function nextPage() {
   currentPage.value++;
 }
-
 function previousPage() {
-  //return if current page is 1
   if (currentPage.value === 1) return;
 
   currentPage.value--;
@@ -122,7 +118,6 @@ function previousPage() {
 watch(() => currentPage.value, () => {
   searchUser(search.value);
 });
-
 
 const isEmpty = computed(() => {
   return !users.value.length;

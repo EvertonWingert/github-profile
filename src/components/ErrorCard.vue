@@ -10,7 +10,7 @@
       </div>
       <div>
         <p class="text-red-800 font-bold">Falha ao buscar usuários</p>
-        <span class="text-red-700 truncate  ">asdasdasdasdasdasdasdasdasdddddddddddddddddddddddddddddddddddddddddddddddFailed {{ error }}</span>
+        <span class="text-red-700 truncate  ">{{ error }}</span>
       </div>
     </div>
   </div>
